@@ -1,0 +1,34 @@
+.b-footer
+    .b-logo.b-logo_footer
+    .b-maps
+        .b-maps__element
+            h6.b-maps__element__items-title О магазине
+            ul.b-maps__element__items
+                each val in ['О нас','Наши цены','Наши скидки','Акции']
+                    li
+                        a(href='#')= val
+        .b-maps__element
+            h6.b-maps__element__items-title Каталог
+            ul.b-maps__element__items
+                each val in ['Смартфоны','Планшеты','Компьютеры','Аксессуары']
+                    li
+                        a(href='#')= val
+        .b-maps__element
+            h6.b-maps__element__items-title Контакты
+            ul.b-maps__element__items
+                each val in ['Телефоны','Адреса','Карта проезда','Обратная связь']
+                    li
+                        a(href='#')= val
+    ul.b-socials
+        .clearfix
+            li
+                a.b-appstore App Store
+            li
+                a.b-googleplay Google play
+        .clearfix
+            li
+                a.b-vkontakte ВКонтакте
+            li
+                a.b-facebook Facebook
+            li
+                a.b-twitter Twitter
