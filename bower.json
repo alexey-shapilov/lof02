@@ -1,0 +1,13 @@
+{
+    "name": "loft2",
+    "dependencies": {},
+    "devDependencies": {
+        "modernizr": "~2.8.3"
+    },
+    "overrides": {
+        "modernizr": {
+            "main": "modernizr.js"
+        }
+    }
+
+}

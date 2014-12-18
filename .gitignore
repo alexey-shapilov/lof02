@@ -1,1 +1,4 @@
 .idea
+_dev/_bower
+node_modules
+app
