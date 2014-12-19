@@ -1,15 +1,17 @@
 .b-nav
-   .b-bread-crumbs
-      a.b-bread-crumbs__href(href='#') Главная
-      span > Каталог
-   select.b-select-style-list
-      each val, index in ['Сеткой','Линиями']
-         option(val=index)= val
-   ul.b-pagination
-      - var current=0
-      each val, index in ['1','2','3','4','5','Все']
-         if current == index
-            li= val
-         else
-            li
-               a(href='index')= val
+   .b-nav__bread-crumbs.left
+      a.b-nav__bread-crumbs__href(href='#') Главная
+      span.b-nav__bread-crumbs__angle-bracket &nbsp; > &nbsp;
+      span.b-nav__bread-crumbs__current Каталог
+   .wrapper.right
+      select.b-nav__select-style-list.left
+         each val, index in ['Сеткой','Линиями']
+            option(val=index)= val
+      ul.b-nav__pagination.left
+         - var current=0
+         each val, index in ['1','2','3','4','5','Все']
+            if current == index
+               li.b-nav__pagination__item= val
+            else
+               li.b-nav__pagination__item
+                  a(href='index')= val

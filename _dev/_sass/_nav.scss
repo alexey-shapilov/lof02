@@ -1,0 +1,48 @@
+$nav_height: 62px;
+.b-nav {
+  height: $nav_height;
+  width: $main_content_width;
+  font-family: elektra_light_proregular;
+  font-size: 14px;
+  .wrapper {
+    height: $nav_height;
+  }
+}
+
+.b-nav__bread-crumbs {
+  height: 100%;
+}
+
+.b-nav__bread-crumbs__href {
+  line-height: $nav_height;
+  color: $color_blue_font;
+}
+
+.b-nav__bread-crumbs__angle-bracket {
+  font-size: 10px;
+}
+
+// TODO Стилизовать
+.b-nav__select-style-list {
+  $height: 26px;
+  margin-top: $nav_height * .5 - $height/2;
+  height: $height;
+  width: 133px;
+}
+
+.b-nav__pagination {
+  list-style: none;
+  margin: 0;
+  height: $nav_height;
+  padding: 0;
+  line-height: $nav_height;
+  margin-left: 31px;
+  font-size: 15px;
+}
+
+.b-nav__pagination__item {
+  display: inline;
+  a{
+    color: $color_blue_font;
+  }
+}

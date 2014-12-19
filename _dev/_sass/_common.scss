@@ -5,8 +5,22 @@ html, body {
 }
 
 $app_width: 1200px;
+$main_content_width: 1000px;
 
 $color_blue_font: #00b9fe;
 $color_gray_font: #5c7b98;
 
 $color_gray_menu: #f7f7f7;
+
+.content-wrapper {
+  width: $main_content_width;
+  margin: 0 auto;
+}
+
+.right {
+  float: right;
+}
+
+.left {
+  float: left;
+}

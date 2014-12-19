@@ -15,10 +15,11 @@ html
         script
     body
         include ../_common/head
-        include ../_common/nav
-        include ../_common/aside
-        .wrapper
+        .content-wrapper
+            include ../_common/nav
+            include ../_common/aside
             .maincontent
                 block content
+
         include ../_common/footer
         script
