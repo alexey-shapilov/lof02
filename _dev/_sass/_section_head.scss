@@ -1,0 +1,112 @@
+.b-head {
+  display: block;
+  position: relative;
+  height: 139px;
+  width: $app_width;
+  margin: 0 auto;
+  .wrapper {
+    position: relative;
+    height: 120px;
+    background: url('/css/img/bg-head.png') repeat-y;
+  }
+}
+
+.b-logo {
+  background: url('/css/img/logo-head.png') no-repeat;
+  width: 199px;
+  height: 57px;
+  position: absolute;
+  left: 101px;
+  top: 25px;
+}
+
+.b-contact {
+  position: absolute;
+  left: 911px;
+  top: 24px;
+}
+
+.b-contact__code-phone {
+  font-size: 15px;
+  color: $color_blue_font;
+  font-family: 'elektra_light_probold';
+}
+
+.b-contact__phone {
+  font-size: 25px;
+  color: $color_gray_font;
+  font-family: 'elektra_light_proregular';
+}
+
+.b-contact__email {
+  font-size: 17px;
+  color: #613993;
+  width: 100%;
+  text-align: center;
+  display: inline-block;
+  font-family: 'elektra_light_proregular';
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+// TODO разобраться с шириной меню
+.b-menu {
+  margin: -20px auto 0;
+  padding: 0;
+  list-style: none;
+  font-family: elektra_light_proregular;
+  font-size: 15px;
+  @include box-shadow(0 1px 0 rgba(0,0,0,.15));
+  width: 976px;
+}
+
+.b-menu__element-tail {
+  width: 0;
+  position: absolute;
+  border-style: solid;
+  border-color: $color_gray_menu transparent $color_gray_menu transparent;
+  border-width: 20px 0 20px 12px;
+  left: -12px;
+  .b-menu__element:first-child & {
+    @include box-shadow(0 1px 0 rgba(0,0,0,.15));
+  }
+}
+
+.b-menu__element {
+  display: inline-block;
+  height: 40px;
+  background-color: $color_gray_menu;
+  position: relative;
+
+  &:after,&:before {
+    left: 100%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-color: rgba(136, 183, 213, 0);
+    border-left-color: $color_gray_menu;
+    border-width: 18px 0 18px 12px;
+    top: 2px;
+    z-index: 2;
+  }
+  &:before {
+    border-color: rgba(194, 225, 245, 0);
+    border-left-color: #dae1eb;
+    border-width: 20px 0 20px 13px;
+    top: 0;
+    z-index: 2;
+  }
+}
+
+.b-menu__element-text {
+  padding: 0 10px 0 25px;
+  line-height: 40px;
+  .b-menu__element:first-child & {
+    padding-left: 10px;
+  }
+}
