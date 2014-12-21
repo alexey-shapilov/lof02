@@ -1,6 +1,17 @@
 ul.b-menu
-   each element in ['Мобильные телефона', 'Планшеты', 'Mp3 плееры', 'Персональные компьютеры', 'Ноутбуки', 'Apple TV', 'Аксессуары']
-      li.b-menu__element
-         .b-menu__element-tail
-         .b-menu__element-text= element
-         .b-menu__element-arrow
+    - var activeElement = 1
+    each element, index in ['Мобильные телефона', 'Планшеты', 'Mp3 плееры', 'Персональные компьютеры', 'Ноутбуки', 'Apple TV', 'Аксессуары']
+        if index == activeElement
+            li.b-menu__element.b-menu__element_active
+                .b-menu__element-tail
+                .b-menu__element-text= element
+                .b-menu__element-arrow
+                    .b-menu__element-arrow__border
+                    .b-menu__element-arrow__main
+        else
+            li.b-menu__element
+                .b-menu__element-tail
+                .b-menu__element-text= element
+                .b-menu__element-arrow
+                    .b-menu__element-arrow__border
+                    .b-menu__element-arrow__main
