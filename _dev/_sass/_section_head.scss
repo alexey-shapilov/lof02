@@ -20,6 +20,8 @@
   top: 25px;
 }
 
+// Блок контакты
+
 .b-contact {
   position: absolute;
   left: 911px;
@@ -51,6 +53,9 @@
   }
 }
 
+//=========================================
+
+// Блок меню
 // TODO разобраться с шириной меню
 .b-menu {
   margin: -20px auto 0;
@@ -58,7 +63,9 @@
   list-style: none;
   font-family: elektra_light_proregular;
   font-size: 15px;
-  @include box-shadow(0 1px 0 rgba(0,0,0,.15));
+  color: $color_gray_font;
+
+  @include box-shadow(0 1px 0 rgba(0, 0, 0, .15));
   width: 976px;
 }
 
@@ -66,11 +73,18 @@
   width: 0;
   position: absolute;
   border-style: solid;
-  border-color: $color_gray_menu transparent $color_gray_menu transparent;
+  border-color: $color_gray_menu transparent;
   border-width: 20px 0 20px 12px;
   left: -12px;
+
   .b-menu__element:first-child & {
-    @include box-shadow(0 1px 0 rgba(0,0,0,.15));
+    @include box-shadow(0 1px 0 rgba(0, 0, 0, .15));
+  }
+  .b-menu__element_hover & {
+    border-color: #dce6f0 transparent;
+  }
+  .b-menu__element_active & {
+    border-color: $color_active transparent;
   }
 }
 
@@ -79,33 +93,64 @@
   height: 40px;
   background-color: $color_gray_menu;
   position: relative;
+  cursor: pointer;
+  margin-left: 10px;
 
-  &:after,&:before {
-    left: 100%;
-    border: solid transparent;
-    content: " ";
-    height: 0;
-    width: 0;
-    position: absolute;
-    pointer-events: none;
-    border-color: rgba(136, 183, 213, 0);
-    border-left-color: $color_gray_menu;
-    border-width: 18px 0 18px 12px;
-    top: 2px;
-    z-index: 2;
+  &:first-child {
+    margin-left: 0;
   }
-  &:before {
-    border-color: rgba(194, 225, 245, 0);
-    border-left-color: #dae1eb;
-    border-width: 20px 0 20px 13px;
-    top: 0;
-    z-index: 2;
+  &.b-menu__element_hover {
+    background-color: #dce6f0;
+  }
+  &.b-menu__element_active {
+    background-color: $color_active;
+    color: white;
+  }
+}
+
+.b-menu__element-arrow {
+  position: relative;
+  top: -40px;
+  left: 100%;
+  width: 13px;
+}
+
+.b-menu__element-arrow__border {
+  position: absolute;
+  left: 0;
+  top: -1px;
+  border: solid transparent;
+  height: 0;
+  width: 2px;
+  pointer-events: none;
+  border-left-color: #dae1eb;
+  border-width: 21px 0 21px 14px;
+  z-index: 2;
+}
+
+.b-menu__element-arrow__main {
+  position: absolute;
+  left: 0;
+  top: 0;
+  border: solid transparent;
+  height: 0;
+  width: 0;
+  pointer-events: none;
+  border-left-color: $color_gray_menu;
+  border-width: 20px 0 20px 13px;
+  z-index: 2;
+  .b-menu__element_hover & {
+    border-left-color: #dce6f0;
+  }
+  .b-menu__element_active & {
+    border-left-color: $color_active;
   }
 }
 
 .b-menu__element-text {
-  padding: 0 10px 0 25px;
+  padding: 0 10px 0 15px;
   line-height: 40px;
+
   .b-menu__element:first-child & {
     padding-left: 10px;
   }

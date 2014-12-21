@@ -10,9 +10,12 @@ html
         meta(name='viewport' content='width=device-width, initial-scale=1.0')
         link(rel="stylesheet" href="/css/style.min.css" type="text/css" media="screen")
         <!--[if lt IE 9]>
-        script(src="js/vendor/html5shiv/html5shiv.min.js")
+        script(src="js/vendor/html5shiv.min.js")
         <![endif]-->
-        script
+
+        script(src="js/vendor/jquery.min.js")
+        script(src="js/vendor/modernizr.js")
+        script(src="js/script.js")
     body
         include ../_common/head
         .content-wrapper

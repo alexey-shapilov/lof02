@@ -10,6 +10,15 @@ var gulp = require('gulp'), // Сообственно Gulp JS
     compass = require('gulp-compass');
 
 // Собираем JS
+
+//streamqueue({ objectMode: true },
+//    gulp.src('./public/angular/config/*.js'),
+//    gulp.src('./public/angular/services/**/*.js'),
+//    gulp.src('./public/angular/modules/**/*.js'),
+//    gulp.src('./public/angular/primitives/**/*.js'),
+//    gulp.src('./public/js/**/*.js')
+//)
+
 gulp.task('js', function () {
     gulp.src(['./_dev/_scripts/*.js'])
         .pipe(concat('script.js')).on('error', log)
@@ -23,13 +32,14 @@ gulp.task('js', function () {
 //        .pipe(rename('style.min.css')).on('error', log)
 //        .pipe(gulp.dest('./app/css')).on('error', log);
 //});
+
 gulp.task('sass', function () {
     gulp.src(['./_dev/_sass/*.scss'])
         .pipe(compass({
             css: './_dev/_sass',
             sass: './_dev/_sass'
         })).on('error', log)
-        .pipe(csso()).on('error', log)
+        //.pipe(csso()).on('error', log)
         .pipe(rename('style.min.css')).on('error', log)
         .pipe(gulp.dest('./app/css')).on('error', log);
 });
