@@ -65,6 +65,7 @@ gulp.task('index', function () {
     gulp.src('./_dev/_sass/img/*').on('error', log)
         .pipe(gulp.dest('./app/css/img')).on('error', log);
 });
+
 gulp.task('img', function () {
     gulp.src('./_dev/_sass/img/*').on('error', log)
         .pipe(gulp.dest('./app/css/img')).on('error', log);
