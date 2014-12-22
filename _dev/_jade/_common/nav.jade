@@ -4,19 +4,5 @@
         span.b-nav__bread-crumbs__angle-bracket &nbsp; > &nbsp;
         span.b-nav__bread-crumbs__current Каталог
     .wrapper.right
-        .b-dropdown.left(data-selected=0)
-            .b-dropdown__select
-                .b-dropdown__select__text Сеткой
-                .b-dropdown__select__btn
-            ul.b-dropdown__menu
-                    - var current=0
-                    each val, index in ['Сеткой','Линиями']
-                        li(class=index == current ? 'b-dropdown__option b-dropdown__option_current' : 'b-dropdown__option', data-index=index)= val
-        ul.b-nav__pagination.left
-            - var current=0
-            each val, index in ['1','2','3','4','5','Все']
-                if current == index
-                    li.b-nav__pagination__item= val
-                else
-                    li.b-nav__pagination__item
-                        a(href='index')= val
+        include block_dropdown
+        include block_pagination
