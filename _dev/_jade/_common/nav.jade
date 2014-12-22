@@ -11,10 +11,7 @@
             ul.b-dropdown__menu
                     - var current=0
                     each val, index in ['Сеткой','Линиями']
-                        if index == current
-                            li.b-dropdown__option.b-dropdown__option_current(data-index=index)= val
-                        else
-                            li.b-dropdown__option(data-index=index)= val
+                        li(class=index == current ? 'b-dropdown__option b-dropdown__option_current' : 'b-dropdown__option', data-index=index)= val
         ul.b-nav__pagination.left
             - var current=0
             each val, index in ['1','2','3','4','5','Все']

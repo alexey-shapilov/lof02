@@ -61,9 +61,8 @@ $height_dropdown: 26px;
   display: none;
   list-style: none;
   border: 1px solid $color_gray_border;
-  margin: 0;
+  margin: 0 0 0 -1px;
   width: 132px;
-  margin-left: -1px;
   padding: 0;
 
   .b-dropdown_open & {

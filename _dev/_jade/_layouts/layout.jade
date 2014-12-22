@@ -16,12 +16,12 @@ html
         script(src="js/vendor/jquery.min.js")
         script(src="js/vendor/modernizr.js")
         script(src="js/script.js")
-    body
+    body.cf
         include ../_common/head
         .content-wrapper.cf
             include ../_common/nav
             include ../_common/aside
-            .maincontent.col4-3
+            .maincontent
                 block content
 
         include ../_common/footer
