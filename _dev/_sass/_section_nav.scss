@@ -64,6 +64,9 @@ $height_dropdown: 26px;
   margin: 0 0 0 -1px;
   width: 132px;
   padding: 0;
+  position: relative;
+  z-index: 2;
+  background: white;
 
   .b-dropdown_open & {
     display: block;

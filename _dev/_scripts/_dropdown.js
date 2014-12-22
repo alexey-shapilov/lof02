@@ -12,7 +12,8 @@
             $('.b-dropdown__option').removeClass('b-dropdown__option_current');
             $this.toggleClass('b-dropdown__option_current');
             dropdown.toggleClass('b-dropdown_open');
-            dropdown.attr('data-selected',$this.attr('data-index'))
+            dropdown.attr('data-selected', $this.attr('data-index'));
+            $('.b-products').attr('class', 'b-products b-products_' + $this.attr('data-index'));
         });
     })
 })(jQuery);
