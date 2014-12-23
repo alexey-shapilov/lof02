@@ -42,6 +42,7 @@ $color_gray_border: #dae1eb;
 .content-wrapper {
   width: $main_content_width;
   margin: 0 auto;
+  position: relative;
 }
 
 .right {

@@ -15,14 +15,14 @@ html
 
         script(src="js/vendor/jquery.min.js")
         script(src="js/vendor/modernizr.js")
-        script(src="js/script.js")
     body.cf
         include ../_common/head
         .content-wrapper.cf
+            include ../_common/block_up
             include ../_common/nav
             include ../_common/aside
             .maincontent
                 block content
 
         include ../_common/footer
-        script
+        script(src="js/script.js")
