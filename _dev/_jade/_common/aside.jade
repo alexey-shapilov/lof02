@@ -4,5 +4,7 @@
         div(class=active == index ? 'b-aside__items b-aside__items_active' : 'b-aside__items')
             h2.b-aside__items__main= mark
             ul.b-aside__items__elements
-                each item in ['> iPhone 4S','> iPhone 5','> iPhone 5s с экслюзивным дизайном','> iPhone 6','> iPhone 6 plus']
-                    li.b-aside__items__elements__element= item
+                each item in ['iPhone 4S','iPhone 5','iPhone 5s с экслюзивным дизайном','iPhone 6','iPhone 6 plus']
+                    li.b-aside__items__elements__element
+                        span.icon
+                        span= item
