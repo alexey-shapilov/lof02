@@ -1,17 +1,8 @@
 .b-up {
   position: fixed;
-  width: 100%;
-  bottom: 292px;
-  left: 0;
-  z-index: -1;
-}
-
-.b-up__fixed {
-  position: relative;
-  left: 550px;
-  bottom: 0;
-  margin: 0 auto;
-  width: 78px;
+  width: 77px;
+  opacity: 0;
+  filter: progid:DXImageTransform.Microsoft.Alpha(opacity = 0, style=0);
   cursor: pointer;
 }
 
@@ -27,15 +18,17 @@
 
 .b-up__arrow-top {
   position: absolute;
-  top: -5px;
+  top: -4px;
   border-color: transparent transparent $color_blue_font transparent;
   border-width: 0 5px 5px 5px;
   border-style: solid;
   margin-left: 34px;
+  filter: progid:DXImageTransform.Microsoft.Alpha(opacity = 0, style=0);
 }
 
 .b-up__arrow-bottom {
   @extend .b-up__arrow-top;
   border-bottom-color: white;
   bottom: 0;
+  filter: progid:DXImageTransform.Microsoft.Alpha(opacity = 0, style=0);
 }
