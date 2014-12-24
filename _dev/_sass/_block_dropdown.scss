@@ -1,0 +1,63 @@
+$height_dropdown: 26px;
+.b-dropdown {
+  display: inline-block;
+  margin-top: 17px;
+  height: $height_dropdown - 2;
+  width: 132px;
+  border: 1px solid $color_gray_border;
+  font-family: elektra_light_proregular;
+  font-size: 14px;
+  color: $color_gray_font;
+}
+
+.b-dropdown__select {
+  height: 100%;
+  width: 100%;
+}
+
+.b-dropdown__select__text {
+  display: block;
+  width: 98px;
+  line-height: $height_dropdown;
+  padding-left: 8px;
+  float: left;
+}
+
+.b-dropdown__select__btn {
+  display: block;
+  float: right;
+  width: 26px;
+  height: 100%;
+  background: url('/css/img/carret.png') no-repeat $color_blue_font;
+  cursor: pointer;
+}
+
+.b-dropdown__menu {
+  display: none;
+  list-style: none;
+  border: 1px solid $color_gray_border;
+  margin: 0 0 0 -1px;
+  width: 132px;
+  padding: 0;
+  position: relative;
+  z-index: 2;
+  background: white;
+
+  .b-dropdown_open & {
+    display: block;
+  }
+}
+
+.b-dropdown__option {
+  padding: 4px 8px;
+  cursor: pointer;
+
+  &.b-dropdown__option_current {
+    color: #bed1e3;
+  }
+
+  &:hover {
+    background: $color_blue_font;
+    color: white;
+  }
+}

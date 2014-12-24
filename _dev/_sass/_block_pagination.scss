@@ -1,0 +1,17 @@
+$pagination_height: 62px;
+.b-pagination {
+  list-style: none;
+  margin: 0 0 0 31px;
+  height: $pagination_height;
+  padding: 0;
+  line-height: $pagination_height;
+  font-family: elektra_light_proregular;
+  font-size: 15px;
+}
+
+.b-pagination__item {
+  display: inline;
+  a {
+    color: $color_blue_font;
+  }
+}

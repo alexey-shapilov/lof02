@@ -1,0 +1,157 @@
+.b-head {
+  display: block;
+  position: relative;
+  height: 139px;
+  width: $app_width;
+  margin: 0 auto;
+  .wrapper {
+    position: relative;
+    height: 120px;
+    background: url('/css/img/bg-head.png') repeat-y;
+  }
+}
+
+.b-logo {
+  background: url('/css/img/logo-head.png') no-repeat;
+  width: 199px;
+  height: 57px;
+  position: absolute;
+  left: 101px;
+  top: 25px;
+}
+
+// Блок контакты
+
+.b-contact {
+  position: absolute;
+  left: 911px;
+  top: 24px;
+}
+
+.b-contact__code-phone {
+  font-size: 15px;
+  color: $color_blue_font;
+  font-family: 'elektra_light_probold';
+}
+
+.b-contact__phone {
+  font-size: 25px;
+  color: $color_gray_font;
+  font-family: 'elektra_light_proregular';
+}
+
+.b-contact__email {
+  font-size: 17px;
+  color: #613993;
+  width: 100%;
+  text-align: center;
+  display: inline-block;
+  font-family: 'elektra_light_proregular';
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+//=========================================
+
+// Блок меню
+// TODO разобраться с шириной меню
+.b-menu {
+  margin: -20px auto 0;
+  padding: 0;
+  list-style: none;
+  font-family: elektra_light_proregular;
+  font-size: 15px;
+  color: $color_gray_font;
+
+  @include box-shadow(0 1px 0 rgba(0, 0, 0, .15));
+  width: 976px;
+}
+
+.b-menu__element-tail {
+  width: 0;
+  position: absolute;
+  border-style: solid;
+  border-color: $color_gray_menu transparent;
+  border-width: 20px 0 20px 12px;
+  left: -12px;
+
+  .b-menu__element:first-child & {
+    @include box-shadow(0 1px 0 rgba(0, 0, 0, .15));
+  }
+  .b-menu__element_hover & {
+    border-color: #dce6f0 transparent;
+  }
+  .b-menu__element_active & {
+    border-color: $color_active transparent;
+  }
+}
+
+.b-menu__element {
+  display: inline-block;
+  height: 40px;
+  background-color: $color_gray_menu;
+  position: relative;
+  cursor: pointer;
+  margin-left: 10px;
+
+  &:first-child {
+    margin-left: 0;
+  }
+  &.b-menu__element_hover {
+    background-color: #dce6f0;
+  }
+  &.b-menu__element_active {
+    background-color: $color_active;
+    color: white;
+  }
+}
+
+.b-menu__element-arrow {
+  position: relative;
+  top: -40px;
+  left: 100%;
+  width: 13px;
+}
+
+.b-menu__element-arrow__border {
+  position: absolute;
+  left: 0;
+  top: -1px;
+  border: solid transparent;
+  height: 0;
+  width: 2px;
+  pointer-events: none;
+  border-left-color: #dae1eb;
+  border-width: 21px 0 21px 14px;
+  z-index: 2;
+}
+
+.b-menu__element-arrow__main {
+  position: absolute;
+  left: 0;
+  top: 0;
+  border: solid transparent;
+  height: 0;
+  width: 0;
+  pointer-events: none;
+  border-left-color: $color_gray_menu;
+  border-width: 20px 0 20px 13px;
+  z-index: 2;
+  .b-menu__element_hover & {
+    border-left-color: #dce6f0;
+  }
+  .b-menu__element_active & {
+    border-left-color: $color_active;
+  }
+}
+
+.b-menu__element-text {
+  padding: 0 10px 0 15px;
+  line-height: 40px;
+
+  .b-menu__element:first-child & {
+    padding-left: 10px;
+  }
+}

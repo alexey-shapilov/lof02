@@ -1,0 +1,23 @@
+$nav_height: 62px;
+.b-nav {
+  height: $nav_height;
+  width: $main_content_width;
+  font-family: elektra_light_proregular;
+  font-size: 14px;
+  .wrapper {
+    height: $nav_height;
+  }
+}
+
+.b-nav__bread-crumbs {
+  height: 100%;
+}
+
+.b-nav__bread-crumbs__href {
+  line-height: $nav_height;
+  color: $color_blue_font;
+}
+
+.b-nav__bread-crumbs__angle-bracket {
+  font-size: 10px;
+}

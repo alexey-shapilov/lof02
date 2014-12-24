@@ -1,0 +1,112 @@
+.b-footer {
+  margin: 0 auto;
+  height: 238px;
+  width: 1200px;
+  background: url('/css/img/bg-footer.png') repeat-y;
+  position: relative;
+}
+
+.b-logo {
+  &.b-logo_footer {
+    background: url('/css/img/logo-footer.png') no-repeat;
+    width: 139px;
+    height: 39px;
+    position: absolute;
+    left: 100px;
+    top: 100px;
+  }
+}
+
+.b-maps {
+  position: absolute;
+  left: 358px;
+  top: 50px;
+  font-family: elektra_light_proregular;
+  font-size: 15px;
+  color: white;
+}
+
+.b-maps__element {
+  display: inline-block;
+  margin-left: 70px;
+  &:first-child {
+    margin-left: 0;
+  }
+
+  h4 {
+    font-family: elektra_light_probold;
+    font-weight: normal;
+    margin: 0;
+  }
+}
+
+.b-maps__element__items {
+  list-style: none;
+  padding: 0;
+  margin: 4px 0 0 0;
+  li {
+    margin-bottom: 4px;
+  }
+  a {
+    color: white;
+    font-family: elektra_light_proregular;
+    font-size: 15px;
+  }
+}
+
+.b-socials {
+  position: absolute;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  left: 915px;
+  top: 72px;
+
+  a {
+    text-indent: -999em;
+  }
+
+  li {
+    margin-left: 6px;
+    float: left;
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+}
+
+.b-socials__socials {
+  margin-top: 26px;
+}
+
+.b-appstore {
+  display: block;
+  width: 90px;
+  height: 32px;
+  background: url('/css/img/spriteOSapp.png') no-repeat;
+}
+
+.b-googleplay {
+  display: block;
+  width: 90px;
+  height: 32px;
+  background: url('/css/img/spriteOSapp.png') 0 -32px no-repeat;
+}
+
+.b-vkontakte {
+  width: 42px;
+  height: 42px;
+  background: url("/css/img/spritesocials.png") no-repeat;
+}
+
+.b-facebook {
+  width: 42px;
+  height: 42px;
+  background: url("/css/img/spritesocials.png") -44px 0 no-repeat;
+}
+
+.b-twitter {
+  width: 42px;
+  height: 42px;
+  background: url("/css/img/spritesocials.png") -86px 0 no-repeat;
+}

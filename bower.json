@@ -1,0 +1,20 @@
+{
+    "name": "loft2",
+    "dependencies": {},
+    "devDependencies": {
+        "modernizr": "~2.8.3",
+        "html5shiv": "~3.7.2",
+        "jquery": "~1.11.1"
+    },
+    "overrides": {
+        "modernizr": {
+            "main": "modernizr.js"
+        },
+        "html5shiv": {
+            "main": "dist/html5shiv.min.js"
+        },
+        "jquery":{
+            "main": "dist/jquery.min.js"
+        }
+    }
+}

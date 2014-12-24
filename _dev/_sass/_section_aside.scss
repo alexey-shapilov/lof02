@@ -1,0 +1,58 @@
+.b-aside {
+  font-family: elektra_light_proregular;
+  font-size: 15px;
+  color: $color_gray_font;
+  width: 230px;
+  float: left;
+}
+
+.b-aside__items__elements {
+  display: none;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background: $color_gray_menu;
+
+  //  .b-aside__items_active & {
+  //    display: block;
+  //  }
+}
+
+.b-aside__items__main {
+  font-size: 15px;
+  margin: 0;
+  padding: 4px 20px;
+  background: $color_gray_menu;
+  border-bottom: 1px solid $color_gray_border;
+  font-weight: normal;
+  cursor: pointer;
+
+  &:hover {
+    background: #dce6f0;
+  }
+  .b-aside__items_active & {
+    background: $color_blue_font;
+    color: white;
+  }
+}
+
+.b-aside__items__elements__element {
+  padding: 4px 20px;
+  border-bottom: 1px solid $color_gray_border;
+  border-top: 1px solid white;
+  cursor: pointer;
+
+  .icon {
+    display: inline-block;
+    content: ' ';
+    height: 8px;
+    width: 7px;
+    background: url('/css/img/carret-r.png') no-repeat;
+    margin-bottom: 1px;
+    margin-right: 4px;
+  }
+
+  &:hover {
+    background: #dce6f0;
+  }
+}

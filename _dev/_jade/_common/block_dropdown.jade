@@ -1,0 +1,8 @@
+.b-dropdown.left(data-selected=0)
+    .b-dropdown__select
+        .b-dropdown__select__text Сеткой
+        .b-dropdown__select__btn
+    ul.b-dropdown__menu
+        - var current=0
+        each val, index in ['Сеткой','Линиями']
+            li(class=index == current ? 'b-dropdown__option b-dropdown__option_current' : 'b-dropdown__option', data-index=index)= val

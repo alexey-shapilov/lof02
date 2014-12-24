@@ -1,0 +1,61 @@
+@import "compass/css3";
+@import "fonts/fonts.css";
+
+html, body {
+  height: 100%;
+}
+
+$app_width: 1200px;
+$main_content_width: 1000px;
+
+$color_blue_font: #00b9fe;
+$color_gray_font: #5c7b98;
+
+$color_gray_menu: #f7f7f7;
+
+$color_active: $color_blue_font;
+
+$color_gray_border: #dae1eb;
+
+.cf:before,
+.cf:after {
+  content: " "; /* 1 */
+  display: table; /* 2 */
+}
+
+.cf:after {
+  clear: both;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.content-wrapper {
+  width: $main_content_width;
+  margin: 0 auto;
+  position: relative;
+}
+
+.right {
+  float: right;
+}
+
+.left {
+  float: left;
+}
+
+
+.hide {
+  display: none;
+  visibility: hidden;
+  opacity: 0;
+}
