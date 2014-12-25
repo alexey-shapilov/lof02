@@ -1,6 +1,6 @@
 ul.b-menu
     - var activeElement = 1
-    each element, index in ['Мобильные телефона', 'Планшеты', 'Mp3 плееры', 'Персональные компьютеры', 'Ноутбуки', 'Apple TV', 'Аксессуары']
+    each element, index in ['Мобильные телефоны', 'Планшеты', 'Mp3 плееры', 'Персональные компьютеры', 'Ноутбуки', 'Apple TV', 'Аксессуары']
         li(class=index == activeElement ? 'b-menu__element b-menu__element_active' : 'b-menu__element')
             .b-menu__element-tail
             .b-menu__element-text= element

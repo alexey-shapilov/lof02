@@ -1,5 +1,5 @@
-var gulp = require('gulp'), // Сообственно Gulp JS
-    csso = require('gulp-csso'), // Минификация CSS
+var
+    gulp = require('gulp'), // Сообственно Gulp JS
 //imagemin = require('gulp-imagemin'), // Минификация изображений
     uglify = require('gulp-uglify'), // Минификация JS
     concat = require('gulp-concat'),
@@ -7,7 +7,9 @@ var gulp = require('gulp'), // Сообственно Gulp JS
     sass = require('gulp-sass'),
     mainBowerFiles = require('main-bower-files'),
     gutil = require('gulp-util'),
-    compass = require('gulp-compass');
+    compass = require('gulp-compass'),
+    jade = require('gulp-jade'),
+    minifyCSS = require('gulp-minify-css');
 
 // Собираем JS
 
@@ -25,6 +27,12 @@ gulp.task('js', function () {
         .pipe(gulp.dest('./app/js')).on('error', log);
 });
 
+gulp.task('jade', function () {
+    gulp.src(['./_dev/_jade/_pages/index.jade'])
+        .pipe(jade({pretty: true}))
+        .pipe(gulp.dest('./app')).on('error', log);
+});
+
 //gulp.task('sass', function () {
 //    gulp.src(['./_dev/_sass/style.scss'])
 //        .pipe(sass()).on('error', log)
@@ -39,7 +47,7 @@ gulp.task('sass', function () {
             css: './_dev/_sass',
             sass: './_dev/_sass'
         })).on('error', log)
-        //.pipe(csso()).on('error', log)
+        .pipe(minifyCSS()).on('error', log)
         .pipe(rename('style.min.css')).on('error', log)
         .pipe(gulp.dest('./app/css')).on('error', log);
 });
@@ -59,26 +67,31 @@ gulp.task("bower-files", function () {
         .pipe(gulp.dest("./app/js/vendor"));
 });
 
-gulp.task('index', function () {
-    gulp.src('./_dev/_jade/_pages/*.html').on('error', log)
-        .pipe(gulp.dest('./app')).on('error', log);
-    gulp.src('./_dev/_sass/img/*').on('error', log)
-        .pipe(gulp.dest('./app/css/img')).on('error', log);
-});
+//gulp.task('index', function () {
+//    gulp.src('./_dev/_jade/_pages/*.html').on('error', log)
+//        .pipe(gulp.dest('./app')).on('error', log);
+//    gulp.src('./_dev/_sass/img/*').on('error', log)
+//        .pipe(gulp.dest('./app/css/img')).on('error', log);
+//});
 
 gulp.task('img', function () {
     gulp.src('./_dev/_sass/img/*').on('error', log)
         .pipe(gulp.dest('./app/css/img')).on('error', log);
     gulp.src('./_dev/img/**/*').on('error', log)
         .pipe(gulp.dest('./app/img')).on('error', log);
+});
 
+gulp.task('fonts', function () {
+    gulp.src('./_dev/_sass/fonts/*').on('error', log)
+        .pipe(gulp.dest('./app/css/fonts')).on('error', log);
 });
 
 gulp.task('watch', function () {
     gulp.watch('./_dev/_sass/*.scss', ['sass']);
+    gulp.watch('./_dev/_sass/fonts/*', ['fonts']);
     gulp.watch('./_dev/_scripts/*.js', ['js']);
     gulp.watch('./_dev/_bower/**/*', ['bower-files']);
-    gulp.watch('./_dev/_jade/_pages/*.html', ['index']);
+    gulp.watch('./_dev/_jade/**/*.jade', ['jade']);
     gulp.watch('./_dev/_sass/img/*', ['img']);
 });
 
