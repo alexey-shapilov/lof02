@@ -63,15 +63,17 @@
   top: 72px;
 
   a {
+    display: inline;
     text-indent: -999em;
-  }
-
-  li {
     margin-left: 6px;
-    float: left;
     &:first-child {
       margin-left: 0;
     }
+  }
+
+  li {
+    display: inline-block;
+//    float: left;
   }
 }
 
